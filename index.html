@@ -60,18 +60,33 @@
         }
 
         .mycards {
-            width: 1200px;
-            margin: 20px auto 20px auto;
+            /* background-color: green; */
+
+            width: auto;
+            margin: 40px 40px 40px 40px;
+            
+        }
+
+        .card-body {
+            /* border: 1px solid gray; */
+            background-color: white;
+            /* box-shadow: 0px 0px 3px 0px gray; */
+            box-shadow: 12px 12px 20px 1px rgba(240, 240, 240, .5);
+
+            border-radius: 0px 0px 5px 5px ;
+            
         }
 
         .mypost {
             /* background-color: green; */
 
             width: 500px;
-            margin: 20px auto 20px auto;
+            margin: 40px auto 40px auto;
             padding: 20px;
+            border: 0.5px solid rgba(200, 200, 200, 1);
+            border-radius: 20px;
 
-            box-shadow: 0px 0px 3px 0px gray;
+            box-shadow: 12px 12px 20px 1px rgba(240, 240, 240, 1);
         }
 
         .mybtn {
@@ -83,15 +98,28 @@
             justify-content: center;
         }
 
-        .mybtn > button {
+        .mybtn>button {
             margin: 0px 5px 0px 5px;
             /* margin-right: 10px; */
         }
 
-        /* .cardH-100 > img {
-            height: 300px;
-            width: auto;
-        } */
+        .card_h-100 {
+            border: 0.5px solid rgba(200, 200, 200, 1);
+            border-radius: 5px;
+        }
+
+        .card_h-100>img {
+            height: 200px;
+            /* width: auto; */
+            object-fit: cover;
+            
+            border-radius: 5px 5px 0px 0px;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -105,6 +133,17 @@
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">영화URL</label>
         </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option selected>--선택하기--</option>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
         <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">코멘트</label>
@@ -117,18 +156,19 @@
     <div class="mycards">
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
-                <div class="card h-100">
+                <div class="card_h-100">
                     <img src="https://images.unsplash.com/photo-1591873381631-4104d6e7d105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
+                        <p class="card-text">여기에 코멘트가 들어갑니다.</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card_h-100">
                     <img src="https://images.unsplash.com/photo-1577735478530-7aae96c930d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80"
                         class="card-img-top" alt="...">
                     <div class="card-body">
@@ -140,24 +180,26 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card_h-100">
                     <img src="https://images.unsplash.com/photo-1548998941-23d53eabadf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
+                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
+                        <p class="card-text">여기에 코멘트가 들어갑니다.</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card h-100">
+                <div class="card_h-100">
                     <img src="https://images.unsplash.com/photo-1587653263995-422546a7a569?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1336&q=80"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">영화 제목이 들어갑니다.</h5>
+                        <p class="card-text">여기에 코멘트가 들어갑니다.</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠.</p>
                     </div>
                 </div>
             </div>
